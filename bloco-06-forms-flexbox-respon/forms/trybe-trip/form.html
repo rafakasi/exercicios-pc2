@@ -9,13 +9,13 @@
 </head>
 <body>
     <header class="cabecalho"><h1>TrybeTrip, concorra a uma viagem</h1></header>
-<form action="GET" class="formulario" id="formu">
+<form action="" method="GET" class="formulario" id="formu">
     <label for="nome-completo">Nome Completo:
-        <input type="text" name="nome-completo" placeholder="Digite seu nome" maxlength="40" id="nome-completo" required>
+        <input type="text" name="nome-completo" placeholder="Digite seu nome" minlength="10" maxlength="40" id="nome-completo" required>
     </label>
     <br>
     <label for=¨email¨>Email:
-        <input type="email" name="email-box" placeholder="Digite seu email" maxlength="50" id="email" required>
+        <input type="email" name="email-box" placeholder="Digite seu email" minlength="10" maxlength="50" id="email" required>
     </label>
     <p>Destino Preferido:</p>
         <input type="radio" name="destino" id="destinoUm"> Arraial do Cabo
@@ -24,7 +24,7 @@
     <input type="radio" name="destino" id="destinoQuatro"> Milho Verde
     <br>
     <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
-    <textarea name="texto-motivador" id="motivador" cols="50" rows="15" placeholder="Digite aqui sua motivação"></textarea>
+    <textarea name="texto-motivador" id="motivador" cols="50" rows="15" placeholder="Digite aqui sua motivação" maxlength="500"></textarea>
     <br>
     <label for="data-viagem">Qual a melhor data para realizar sua viagem?
         <input type="date" name="dataViagem" id="data-viagem" required>
