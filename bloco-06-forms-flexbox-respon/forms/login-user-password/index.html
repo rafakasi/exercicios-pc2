@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,25 @@
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="cabecalho"><h1>Por favor, logue no site</h1></header>
+    <header class="cabecalho">
+        <h1>Por favor, logue no site</h1>
+    </header>
     <section class="secao">
-     <form action="GET">
-        <p>Usuário</p> 
-        <input type="text" name="usuario" placeholder="Digite seu email" id="user" required autocomplete="off" autofocus>
-        <p>Senha</p>
-         <input type="password" name="senha" placeholder="Digite sua senha" id="pass" required>
-         <br>
-         <input type="checkbox" name="lembrar">Lembre-me
-         <br>
-         <button type="submit" class="botao">Entrar</button>
-     </form>   
+        <form action="GET" id="form-login">
+            <p>Usuário</p>
+            <input type="text" name="usuario" placeholder="Digite seu email" id="user" required autocomplete="off"
+                autofocus>
+            <p>Senha</p>
+            <input type="password" name="senha" placeholder="Digite sua senha" id="pass" required>
+            <br>
+            <input type="checkbox" name="lembrar" id="lembrar-senha">Lembre-me
+            <br>
+            <button type="submit" class="botao">Entrar</button>
+        </form>
     </section>
+    <script src="script.js"></script>
 </body>
+
 </html>
