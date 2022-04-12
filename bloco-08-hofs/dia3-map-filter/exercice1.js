@@ -1,88 +1,91 @@
 const books = [
-    {
-      id: 1,
-      name: 'As Crônicas de Gelo e Fogo',
-      genre: 'Fantasia',
-      author: {
-        name: 'George R. R. Martin',
-        birthYear: 1948,
-      },
-      releaseYear: 1991,
+  {
+    id: 1,
+    name: "As Crônicas de Gelo e Fogo",
+    genre: "Fantasia",
+    author: {
+      name: "George R. R. Martin",
+      birthYear: 1948,
     },
-    {
-      id: 2,
-      name: 'O Senhor dos Anéis',
-      genre: 'Fantasia',
-      author: {
-        name: 'J. R. R. Tolkien',
-        birthYear: 1892,
-      },
-      releaseYear: 1954,
+    releaseYear: 1991,
+  },
+  {
+    id: 2,
+    name: "O Senhor dos Anéis",
+    genre: "Fantasia",
+    author: {
+      name: "J. R. R. Tolkien",
+      birthYear: 1892,
     },
-    {
-      id: 3,
-      name: 'Fundação',
-      genre: 'Ficção Científica',
-      author: {
-        name: 'Isaac Asimov',
-        birthYear: 1920,
-      },
-      releaseYear: 1951,
+    releaseYear: 1954,
+  },
+  {
+    id: 3,
+    name: "Fundação",
+    genre: "Ficção Científica",
+    author: {
+      name: "Isaac Asimov",
+      birthYear: 1920,
     },
-    {
-      id: 4,
-      name: 'Duna',
-      genre: 'Ficção Científica',
-      author: {
-        name: 'Frank Herbert',
-        birthYear: 1920,
-      },
-      releaseYear: 1965,
+    releaseYear: 1951,
+  },
+  {
+    id: 4,
+    name: "Duna",
+    genre: "Ficção Científica",
+    author: {
+      name: "Frank Herbert",
+      birthYear: 1920,
     },
-    {
-      id: 5,
-      name: 'A Coisa',
-      genre: 'Terror',
-      author: {
-        name: 'Stephen King',
-        birthYear: 1947,
-      },
-      releaseYear: 1986,
+    releaseYear: 1965,
+  },
+  {
+    id: 5,
+    name: "A Coisa",
+    genre: "Terror",
+    author: {
+      name: "Stephen King",
+      birthYear: 1947,
     },
-    {
-      id: 6,
-      name: 'O Chamado de Cthulhu',
-      genre: 'Terror',
-      author: {
-        name: 'H. P. Lovecraft',
-        birthYear: 1890,
-      },
-      releaseYear: 1928,
+    releaseYear: 1986,
+  },
+  {
+    id: 6,
+    name: "O Chamado de Cthulhu",
+    genre: "Terror",
+    author: {
+      name: "H. P. Lovecraft",
+      birthYear: 1890,
     },
-  ];
-  
-  // Adicione o código do exercício aqui:
+    releaseYear: 1928,
+  },
+];
+
+// Adicione o código do exercício aqui:
 
 // 1- Crie um array com strings no formato NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
 
-const listagemLivros = books.map((livros) => `${livros.name} - ${livros.genre} - ${livros.author.name}`);
+const listagemLivros = books.map(
+  (livros) => `${livros.name} - ${livros.genre} - ${livros.author.name}`
+);
 
 // console.log(listagemLivros);
 
 // 2- Construa um array de objetos a partir do array de livros. Cada objeto deve conter uma propriedade author , com o nome da pessoa autora do livro, e uma propriedade age com a idade dessa pessoa quando o livro foi lançado. O array deve ser ordenado por idade, ou seja, da pessoa mais jovem para a mais velha considerando suas idades quando o livro foi lançado.
 
-const autorIdade = books.map((auId) => (
-  {
+const autorIdade = books.map((auId) => ({
   autor: auId.author.name,
   idade: auId.releaseYear - auId.author.birthYear,
-  }
-))
+}));
 
 autorIdade.sort((a1, a2) => a1.idade - a2.idade);
 
 // 3 - Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
 
-const ficcaoFantasia = books.filter((generos) => generos.genre === 'Fantasia' || generos.genre === 'Ficção Científica');
+const ficcaoFantasia = books.filter(
+  (generos) =>
+    generos.genre === "Fantasia" || generos.genre === "Ficção Científica"
+);
 
 // 4 - Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro mais velho.
 
@@ -92,16 +95,29 @@ livroVelho.sort((v1, v2) => v1.releaseYear - v2.releaseYear);
 
 // 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
 
-const nomesFicFan = books.filter((nomes) => nomes.genre === 'Fantasia' || nomes.genre === 'Ficção Científica').map((nome) => nome.author.name).sort();
+const nomesFicFan = books
+  .filter(
+    (nomes) => nomes.genre === "Fantasia" || nomes.genre === "Ficção Científica"
+  )
+  .map((nome) => nome.author.name)
+  .sort();
 
 // 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
 
 // const livroVelhos = books.filter((velho) => 2022 - velho.releaseYear >= 60)
 // const velhos = livroVelhos.map((velharia) => velharia.name)
 // console.log(velhos);
-const livroVelhos = books.filter((velho) => 2022 - velho.releaseYear >= 60).map((nome) => nome.name);
+const livroVelhos = books
+  .filter((velho) => 2022 - velho.releaseYear >= 60)
+  .map((nome) => nome.name);
 
 // 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
 
-const iniciais = books.find((inicial) => inicial.author.name.split(' ').filter((tresPontos) => tresPontos.endsWith('.')).length === 3).name;
-console.log(iniciais);
+const iniciais = books.find(
+  (inicial) =>
+    inicial.author.name
+      .split(" ")
+      .filter((tresPontos) => tresPontos.endsWith(".")).length === 3
+).name;
+
+const casa = books.find()
