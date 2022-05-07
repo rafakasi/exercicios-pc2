@@ -2,16 +2,7 @@
     text-align: center;
   }
 
-.body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .pokemon {
+.pokemon {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -21,6 +12,8 @@
     margin: 10px 10px;
     border: 1px gray solid;
     border-radius: 10px;
+    background-color: rgb(236, 132, 132);
+    box-shadow: 2px 2px 2px;
   }
   
   .pokedex {

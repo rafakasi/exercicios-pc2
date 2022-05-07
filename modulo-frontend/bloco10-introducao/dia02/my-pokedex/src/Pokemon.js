@@ -11,7 +11,7 @@ class Pokemon extends Component {
                 <div>
                     <p>{ name }</p>
                     <p>{ type }</p>
-                    <p>{ `Average Weight boladão: ${averageWeight.value} ${averageWeight.measurementUnit}` }</p>
+                    <p>{ `Peso: ${averageWeight.value} ${averageWeight.measurementUnit}` }</p>
                 </div>
                 <img src={ image } alt={`${name} evaporou`} />
             </div>

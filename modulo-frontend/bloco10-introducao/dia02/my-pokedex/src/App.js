@@ -7,7 +7,7 @@ class App extends Component {
   render(){
     return(
     <div className="App">
-      <h1> Welcome to Pokedex </h1>
+      <h1> Bem vindo a Pokedex </h1>
       <Pokedex pokemons={pokemons} />
     </div>
     )
