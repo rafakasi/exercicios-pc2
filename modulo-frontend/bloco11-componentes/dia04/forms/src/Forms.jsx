@@ -49,6 +49,7 @@ class Forms extends Component {
          <option value="pr">Paraná</option>
        </select>
       </label>
+       <input type="file" />
     </form>
     </div>
         )
