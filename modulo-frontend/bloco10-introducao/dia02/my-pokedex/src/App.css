@@ -12,8 +12,14 @@
     margin: 10px 10px;
     border: 1px gray solid;
     border-radius: 10px;
-    background-color: rgb(236, 132, 132);
+    background-color: rgba(236, 132, 132, 0.808);
     box-shadow: 2px 2px 2px;
+  }
+
+  .pokemon:hover {
+    transform: translateY(-10px);
+    transition: all 0.2s;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
   }
   
   .pokedex {

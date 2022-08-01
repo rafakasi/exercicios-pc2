@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin: 30px;
+}
+
+.amarelo {
+  background-color: yellow;
+  width: 120px;
+  height: 100px;
+}
+
+.vermelho {
+  background-color: red;
+  width: 120px;
+  height: 100px;
+}
+
+.laranja {
+  background-color: orange;
+  width: 120px;
+  height: 100px;
+}
